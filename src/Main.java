@@ -21,7 +21,7 @@ public class Main {
         Circle c3 = new Circle(placeX, placeY, size * 2, "green");
         Circle c4 = new Circle(placeX, placeY, size, "blue");
 
-        Text name = new Text(600, 300, "Yod OLE!", "magenta");
+        Text name = new Text(600, 300, "Yod yored!", "magenta");
 
         placeX = 100;
         placeY = 400;

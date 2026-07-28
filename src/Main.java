@@ -27,7 +27,7 @@ public class Main {
         placeY = 400;
         size = 200;
 
-        Triangle t2 = new Triangle(placeX, placeY, size, 140, "cyan");
+        Triangle t2 = new Triangle(placeX, placeY, size, 140, "red");
         Triangle t3 = new Triangle(placeX, placeY, size, 140, "cyan");
         Triangle t4 = new Triangle(placeX, placeY, size, 140, "cyan");
 

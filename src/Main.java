@@ -40,6 +40,46 @@ public class Main {
         windowRightH.move(deltaX, deltaY);
         signText.move(deltaX, deltaY);
     }
+
+    public static void move2(Square houseBody, Triangle roof, Rectangle door,
+                             Circle doorHandle, Square windowLeft, Square windowRight,
+                             Rectangle signBoard,Line windowLeftV, Line windowLeftH, Line windowRightV, Line windowRightH, Text signText, int deltaX, int deltaY){
+
+
+        //הפינה השמאלית
+        int minXAfter = 400 + deltaX;
+        //הפינה הימנית
+        int maxXAfter = 600 + deltaX;
+        //הפינה העליונה שעל הגג
+        int minYAfter = 150 + deltaY;
+        //הפינה התחתונה
+        int maxYAfter = 450 + deltaY;
+
+
+        if (minXAfter < 0 || maxXAfter > 1000 || minYAfter < 0 || maxYAfter > 600) {
+            System.out.println("out of boundaries! try again with a different number...");
+            return;
+        }
+
+        houseBody.move(deltaX, deltaY);
+        roof.move(deltaX, deltaY);
+        door.move(deltaX, deltaY);
+        doorHandle.move(deltaX, deltaY);
+        windowLeft.move(deltaX, deltaY);
+        windowRight.move(deltaX, deltaY);
+        signBoard.move(deltaX, deltaY);
+        windowLeftV.move(deltaX, deltaY);
+        windowLeftH.move(deltaX, deltaY);
+        windowRightV.move(deltaX, deltaY);
+        windowRightH.move(deltaX, deltaY);
+        signText.move(deltaX, deltaY);
+    }
+
+
+
+
+
+
 	public static void main(String[] args) {
 
                 Square houseBody = new Square(400, 250, 200, "red");
@@ -55,7 +95,8 @@ public class Main {
                 Rectangle signBoard = new Rectangle(415, 350, 50, 30, "magenta");
                 Text signText = new Text(420, 370, "HOME", "black");
 
-        move1(houseBody, roof, door, doorHandle, windowLeft, windowRight, signBoard, windowLeftV, windowLeftH, windowRightV, windowRightH, signText, 500, 200);
+
+       // move1(houseBody, roof, door, doorHandle, windowLeft, windowRight, signBoard, windowLeftV, windowLeftH, windowRightV, windowRightH, signText, 700, 400);
 
     }
     }

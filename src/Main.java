@@ -77,7 +77,37 @@ public class Main {
 
 
 
+    public static void copyShape(Square houseBody, Triangle roof, Rectangle door,
+                             Circle doorHandle, Square windowLeft, Square windowRight,
+                             Rectangle signBoard,Line windowLeftV, Line windowLeftH, Line windowRightV, Line windowRightH, Text signText, int newX, int newY) {
+        //הפינה השמאלית
+        int minXAfter = newX;
+        //הפינה הימנית
+        int maxXAfter = newX + 200;
+        //הפינה העליונה שעל הגג
+        int minYAfter = newY - 100;
+        //הפינה התחתונה
+        int maxYAfter = newY + 200;
 
+        if (minXAfter < 0 || maxXAfter > 1000 || minYAfter < 0 || maxYAfter > 600) {
+            System.out.println("out of boundaries! try again with a different number...");
+            return;
+        }
+
+
+        houseBody = new Square(newX, newY, 200, "red");
+        roof = new Triangle(newX + 100, newY - 100, 200, 100, "yellow");
+        door = new Rectangle(newX + 75, newY + 80, 50, 120, "blue");
+        doorHandle = new Circle(newX + 115, newY + 140, 5, "white");
+        windowLeft = new Square(newX + 20, newY + 30, 40, "blue");
+        windowRight = new Square(newX + 140, newY + 30, 40, "blue");
+        windowLeftV = new Line(newX + 40, newY + 30, newX + 40, newY + 70, "black");
+        windowLeftH = new Line(newX + 20, newY + 50, newX + 60, newY + 50, "black");
+        windowRightV = new Line(newX + 160, newY + 30, newX + 160, newY + 70, "black");
+        windowRightH = new Line(newX + 140, newY + 50, newX + 180, newY + 50, "black");
+        signBoard = new Rectangle(newX + 15, newY + 100, 50, 30, "magenta");
+        signText = new Text(newX + 20, newY + 120, "HOME", "black");
+    }
 
 
 	public static void main(String[] args) {
@@ -95,8 +125,9 @@ public class Main {
                 Rectangle signBoard = new Rectangle(415, 350, 50, 30, "magenta");
                 Text signText = new Text(420, 370, "HOME", "black");
 
-
        // move1(houseBody, roof, door, doorHandle, windowLeft, windowRight, signBoard, windowLeftV, windowLeftH, windowRightV, windowRightH, signText, 700, 400);
+        //move2(houseBody, roof, door, doorHandle, windowLeft, windowRight, signBoard, windowLeftV, windowLeftH, windowRightV, windowRightH, signText, 100, 100 );
+        // copyShape(houseBody, roof, door, doorHandle, windowLeft, windowRight, signBoard, windowLeftV, windowLeftH, windowRightV, windowRightH, signText, 700, 400);
 
     }
     }
